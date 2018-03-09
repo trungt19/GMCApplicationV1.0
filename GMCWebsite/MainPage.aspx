@@ -23,6 +23,9 @@
         .auto-style5 {
             color: #0000CC;
         }
+        .auto-style6 {
+            color: #FF0000;
+        }
     </style>
 </head>
 <body>
@@ -88,10 +91,8 @@
                 <SortedDescendingHeaderStyle BackColor="#7E0000" />
             </asp:GridView>
         </p>
-        <p>
-            More information including the directors and actors in the movie:</p>
-        <p>
-            <asp:GridView ID="GridView5" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource6">
+        <p class="auto-style6">
+            <strong><em>More information including the directors and actors in the movie:</em></strong><asp:GridView ID="GridView5" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource6">
                 <Columns>
                     <asp:BoundField DataField="Director" HeaderText="Director" ReadOnly="True" SortExpression="Director" />
                 </Columns>
@@ -105,6 +106,30 @@
                 <SortedDescendingCellStyle BackColor="#F6F0C0" />
                 <SortedDescendingHeaderStyle BackColor="#7E0000" />
             </asp:GridView>
+            </p>
+        <p class="auto-style6">
+            <asp:GridView ID="GridView8" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource9">
+                <Columns>
+                    <asp:BoundField DataField="Actor" HeaderText="Actor" ReadOnly="True" SortExpression="Actor" />
+                    <asp:BoundField DataField="Role Played" HeaderText="Role Played" SortExpression="Role Played" />
+                </Columns>
+                <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
+                <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
+                <PagerStyle BackColor="#FFFFCC" ForeColor="#330099" HorizontalAlign="Center" />
+                <RowStyle BackColor="White" ForeColor="#330099" />
+                <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" />
+                <SortedAscendingCellStyle BackColor="#FEFCEB" />
+                <SortedAscendingHeaderStyle BackColor="#AF0101" />
+                <SortedDescendingCellStyle BackColor="#F6F0C0" />
+                <SortedDescendingHeaderStyle BackColor="#7E0000" />
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource9" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT CONCAT(R.fname, ' ', R.lname)  AS Actor, R.role AS 'Role Played' FROM MOVIES AS M INNER JOIN ROLES AS R ON M.id = R.movie_id WHERE (M.title = @title)">
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="DropDownList1" Name="title" PropertyName="SelectedValue" />
+                </SelectParameters>
+            </asp:SqlDataSource>
+        </p>
+        <p>
             <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT CONCAT(D.fname, ' ',   D.lname)  AS Director  FROM MOVIES AS M INNER JOIN DIRECTORS AS D ON M.id = D.movie_id WHERE (M.title = @title)">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="DropDownList1" Name="title" PropertyName="SelectedValue" />

@@ -31,6 +31,6 @@
         <strong>Click on our logo to enter a realm of blissfulness :)</strong></p>
     <p class="auto-style1">
        
-    <center><a href="mailto:trungt@uw.edu"><img src="contactus.jpg" alt="contact us" height="100" width="100" </center></a>
+    <a href="mailto:trungt@uw.edu"><img src="contactus.jpg" alt="contact us" height="100" width="100" </a>
 </body>
 </html>
