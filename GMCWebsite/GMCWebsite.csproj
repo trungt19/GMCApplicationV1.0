@@ -75,10 +75,62 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="movieQueries.aspx" />
+    <Content Include="amazonVideo.png" />
+    <Content Include="bin\amazonVideo.png" />
+    <Content Include="App_Data\MovieDatabase.mdf" />
+    <Content Include="App_Data\MovieDatabase_log.ldf">
+      <DependentUpon>MovieDatabase.mdf</DependentUpon>
+    </Content>
+    <Content Include="bin\GMClogo.png" />
+    <Content Include="contactus.jpg" />
+    <Content Include="GMClogo.png" />
+    <Content Include="SearchByGenre.aspx" />
+    <Content Include="SearchByLocation.aspx" />
     <Content Include="Web.config" />
+    <Content Include="MainPage.aspx" />
+    <Content Include="LandingPage.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="movieQueries.aspx.cs">
+      <DependentUpon>movieQueries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="movieQueries.aspx.designer.cs">
+      <DependentUpon>movieQueries.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchByGenre.aspx.cs">
+      <DependentUpon>SearchByGenre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchByGenre.aspx.designer.cs">
+      <DependentUpon>SearchByGenre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchByLocation.aspx.cs">
+      <DependentUpon>SearchByLocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchByLocation.aspx.designer.cs">
+      <DependentUpon>SearchByLocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.aspx.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPage.aspx.designer.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LandingPage.aspx.cs">
+      <DependentUpon>LandingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LandingPage.aspx.designer.cs">
+      <DependentUpon>LandingPage.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
