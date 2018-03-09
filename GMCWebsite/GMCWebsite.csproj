@@ -75,6 +75,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="amazonlogo.jpg" />
+    <Content Include="amclogo.jpg" />
+    <Content Include="googleplaylogo.jpg" />
+    <Content Include="hbologo.png" />
+    <Content Include="ituneslogo.png" />
     <Content Include="movieQueries.aspx" />
     <Content Include="amazonVideo.png" />
     <Content Include="bin\amazonVideo.png" />
@@ -87,9 +92,12 @@
     <Content Include="GMClogo.png" />
     <Content Include="SearchByGenre.aspx" />
     <Content Include="SearchByLocation.aspx" />
+    <Content Include="theaterslogo.jpg" />
+    <Content Include="vudulogo.png" />
     <Content Include="Web.config" />
     <Content Include="MainPage.aspx" />
     <Content Include="LandingPage.aspx" />
+    <Content Include="youtubelogo.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="movieQueries.aspx.cs">

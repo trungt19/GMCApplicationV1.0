@@ -91,6 +91,30 @@
                 <SortedDescendingHeaderStyle BackColor="#7E0000" />
             </asp:GridView>
         </p>
+        <p>
+            &nbsp;</p>
+        <a href="https://www.amazon.com/Amazon-Video/b?ie=UTF8&node=2858778011">
+            <img border="0" alt="amazonlogo" src="amazonlogo.jpg" width="100" height="100" />
+        </a>
+        <a href="https://www.youtube.com/red">
+            <img border="0" alt="YouTubelogo" src="youtubelogo.jpg" width="100" height="100" />
+        </a>
+        <a href="https://www.vudu.com">
+            <img border="0" alt="vudulogo" src="vudulogo.png" width="100" height="100" />
+        </a>
+        <a href="https://www.apple.com/itunes/?cid=OAS-US-DOMAINS-itunes.com">
+            <img border="0" alt="ituneslogo" src="ituneslogo.png" width="100" height="100" />
+        </a>
+        <a href="https://play.google.com/store">
+            <img border="0" alt="googleplaylogo" src="googleplaylogo.jpg" width="100" height="100" />
+        </a>
+        <a href="https://www.amctheatres.com/">
+            <img border="0" alt="theaterslogo" src="amclogo.jpg" width="100" height="100" />
+        </a>
+        <a href="https://play.hbogo.com/">
+            <img border="0" alt="hbogologo" src="hbologo.png" width="100" height="100" />
+        </a>
+
         <p class="auto-style6">
             <strong><em>More information including the directors and actors in the movie:</em></strong><asp:GridView ID="GridView5" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource6">
                 <Columns>
@@ -231,6 +255,8 @@
                 <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
                 <SortedDescendingCellStyle BackColor="#E5E5E5" />
                 <SortedDescendingHeaderStyle BackColor="#242121" />
+
+             
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource8" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT MOVIES.title AS 'Top Action Movies of 2017', MOVIES.rt_rating AS 'Rotten Tomatoes Score' FROM MOVIES INNER JOIN GENRES ON MOVIES.id = GENRES.movie_id WHERE (GENRES.genre = 'Action') AND (MOVIES.rt_rating &gt;= 70) AND (MOVIES.release_year = 2017) ORDER BY 'Rotten Tomatoes Score' DESC"></asp:SqlDataSource>
         </p>
